@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CardContainer, CardBody, CardItem } from './components/ui/3d-card';
 import { MapPin, Calendar, Users, Award, ChevronDown } from 'lucide-react';
 import { FloatingNav } from './components/FloatingNav';
 import { HeroParallax } from './components/HeroParallax';
@@ -191,22 +192,59 @@ function App() {
           </div>
 
           <div className="flex flex-col gap-12 max-w-6xl mx-auto">
-            <div className="relative flex justify-center">
-              <div className="absolute -inset-4 bg-white rounded-2xl blur-2xl opacity-20"></div>
-              <img 
-                src="/images/peta.jpg" 
-                alt="Kecamatan Komodo"
-                className="relative rounded-2xl shadow-2xl w-[90%] sm:w-[70%] md:w-[40%] h-auto object-contain"
-              />
-            </div>
+          <CardContainer className="inter-var">
+            <CardBody className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border-white/[0.2] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+              <CardItem
+                translateZ="50"
+                className="text-xl font-bold text-neutral-600"
+              >
+                Peta Kecamatan Komodo
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2"
+              >
+                Kabupaten Manggarai Barat, Nusa Tenggara Timur
+              </CardItem>
+              <CardItem translateZ="100" className="w-full mt-4">
+                <img
+                  src="/images/peta.jpg"
+                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="Peta Kecamatan Komodo"
+                />
+              </CardItem>
+              <div className="flex justify-between items-center mt-6">
+                <CardItem
+                  translateZ={20}
+                  as="a"
+                  href="https://www.google.com/maps/place/Komodo,+West+Manggarai+Regency,+East+Nusa+Tenggara/@-8.5995398,118.9913931,250940m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2db458f63bbcbb1d:0x38d588e19e673c08!8m2!3d-8.4924682!4d119.8773103!16s%2Fg%2F120n34s3?entry=ttu&g_ep=EgoyMDI1MTExMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-xl text-xs font-normal text-white bg-green-600 hover:bg-green-700 flex items-center gap-1 transition-all"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                  </svg>
+                  Buka di Maps
+                </CardItem>
+                <CardItem
+                  translateZ={20}
+                  className="px-4 py-2 rounded-xl bg-white text-black text-xs font-semibold"
+                >
+                  📍 Manggarai Barat
+                </CardItem>
+              </div>
+            </CardBody>
+          </CardContainer>
 
             <div className="space-y-6">
-              <p className="text-base md:text-lg text-white leading-relaxed">
+              <p className="text-base md:text-lg text-white leading-relaxed text-center">
                 Kecamatan Komodo terletak di Kabupaten Manggarai Barat, Nusa Tenggara Timur, yang terkenal sebagai 
                 habitat asli hewan purba Komodo. Wilayah ini memiliki keindahan alam yang luar biasa dengan 
                 pantai-pantai eksotis dan keanekaragaman hayati yang kaya.
               </p>
-              <p className="text-base md:text-lg text-white leading-relaxed">
+              <p className="text-base md:text-lg text-white leading-relaxed text-center">
                 Melalui program KKN-PPM UGM Periode II tahun 2026 dengan tema "Optimalisasi Potensi Daerah melalui Pembangunan 
                 dan Pemberdayaan Masyarakat Pesisir dengan Berkonsentrasi pada Sumber Daya Lokal sebagai Strategi Penguatan Sumber 
                 Daya Manusia dan Daya Saing Pariwisata Berkelanjutan", kami berkomitmen 

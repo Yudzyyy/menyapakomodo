@@ -1,5 +1,6 @@
 import React from 'react';
 import { Download, ExternalLink, QrCode } from 'lucide-react';
+import { PinContainer } from '../components/ui/3d-pin';
 import { useNavigate } from 'react-router-dom';
 import { FloatingNav } from '../components/FloatingNav';
 
@@ -14,42 +15,35 @@ export default function Recruitment() {
 
   const handleNavClick = (link) => {
     if (link.startsWith('/#')) {
-      // Navigate to home and scroll to section
       navigate('/');
       setTimeout(() => {
         const sectionId = link.replace('/#', '');
         const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
-      // Navigate to page
       navigate(link);
     }
   };
 
   return (
-    <div 
-        className="min-h-screen relative overflow-hidden"
-        style={{
-            backgroundImage: 'url(/images/frame.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundColor: '#138b7d'
-        }}
-        >
-
-      {/* Floating Nav */}
+    <div
+      className="min-h-screen relative overflow-hidden"
+      style={{
+        backgroundImage: 'url(/images/frame.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor: '#138b7d',
+      }}
+    >
       <FloatingNav navItems={navItems} onNavClick={handleNavClick} />
 
-      {/* Main Content - Add top padding to avoid navbar overlap */}
       <div className="container mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-16">
         <div className="max-w-4xl mx-auto">
-          {/* Title */}
+          
+          {/* TITLE */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-
               Open Recruitment 2026
             </h1>
             <div className="w-24 h-1 bg-green-600 mx-auto rounded-full mb-6"></div>
@@ -61,47 +55,8 @@ export default function Recruitment() {
             </p>
           </div>
 
-          {/* QR Code Section */}
-          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <QrCode className="w-8 h-8 text-green-600" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4">
-                Scan QR Code untuk Daftar
-              </h2>
-              <p className="text-sm md:text-base text-gray-600 mb-8 px-4">
-                Scan QR code di bawah ini atau klik tombol untuk mengisi formulir pendaftaran
-              </p>
-              
-              {/* QR Code Image */}
-              <div className="flex justify-center mb-8">
-                <div className="bg-white p-4 md:p-6 rounded-2xl shadow-lg border-4 border-green-600">
-                  <img 
-                    src="/images/qr-oprec.png" 
-                    alt="QR Code Pendaftaran"
-                    className="w-48 h-48 md:w-64 md:h-64 object-contain"
-                    onError={(e) => {
-                      e.target.src = "https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://forms.gle/your-form-link";
-                    }}
-                  />
-                </div>
-              </div>
 
-              {/* Button Daftar */}
-              <a
-                href="https://forms.gle/your-google-form-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-6 md:px-8 py-3 md:py-4 bg-green-600 text-white rounded-full font-semibold text-base md:text-lg hover:bg-green-700 transition-all shadow-lg hover:shadow-xl hover:scale-105"
-              >
-                <span>Daftar Sekarang</span>
-                <ExternalLink className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Guidebook Section */}
+          {/* GUIDEBOOK */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
             <div className="flex flex-col md:flex-row items-start space-y-4 md:space-y-0 md:space-x-4">
               <div className="flex-shrink-0 mx-auto md:mx-0">
@@ -109,16 +64,16 @@ export default function Recruitment() {
                   <Download className="w-8 h-8 text-blue-600" />
                 </div>
               </div>
+
               <div className="flex-1 w-full">
                 <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center md:text-left">
                   Download Guidebook
                 </h2>
+
                 <p className="text-sm md:text-base text-gray-600 mb-6 text-center md:text-left">
-                  Panduan lengkap untuk calon peserta KKN-PPM UGM Periode II 2026 di Kecamatan Komodo. 
-                  Pelajari persyaratan, jadwal, dan informasi penting lainnya.
+                  Panduan lengkap untuk calon peserta KKN-PPM UGM Periode II 2026 di Kecamatan Komodo.
                 </p>
-                
-                {/* Guidebook Preview */}
+
                 <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 md:p-6 mb-6">
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div className="flex items-center space-x-3 md:space-x-4">
@@ -127,8 +82,11 @@ export default function Recruitment() {
                           <path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
                         </svg>
                       </div>
+
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-bold text-gray-800 text-sm md:text-base break-words">Guidebook_Menyapa Komodo 2026</h3>
+                        <h3 className="font-bold text-gray-800 text-sm md:text-base break-words">
+                          Guidebook_Menyapa Komodo 2026
+                        </h3>
                         <p className="text-xs md:text-sm text-gray-600">PDF Document • 2.5 MB</p>
                       </div>
                     </div>
@@ -147,7 +105,7 @@ export default function Recruitment() {
             </div>
           </div>
 
-          {/* Info Cards */}
+          {/* INFO CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
             <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 text-center">
               <div className="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 bg-green-100 rounded-full mb-3 md:mb-4">
@@ -183,9 +141,53 @@ export default function Recruitment() {
             </div>
           </div>
 
-          {/* Timeline */}
+          {/* QR CODE SECTION dengan 3D Pin */}
+            <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 md:mb-16">
+            <div className="text-center">
+                
+                <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
+                Form Pendaftaran
+                </h3>
+                
+                <p className="text-sm md:text-base text-gray-600 mb-6">
+                Scan atau Klik untuk mendaftar
+                </p>
+                
+                {/* 3D Pin Container */}
+                <div className="flex justify-center pt-8 pb-12 md:pt-12 md:pb-16" style={{ minHeight: '450px' }}>
+                <PinContainer
+                    title="🚀 Daftar Sekarang"
+                    href="https://forms.gle/your-google-form-link"
+                >
+                    <div className="flex flex-col p-4 md:p-6 tracking-tight w-[16rem] h-[19rem] sm:w-[18rem] sm:h-[20rem] md:w-[20rem] md:h-[22rem]">
+                    <h3 className="max-w-xs pb-2 m-0 font-bold text-lg text-gray-800 text-center">
+                        Scan QR Code
+                    </h3>
+                    
+                    <div className="text-sm m-0 p-0 font-normal mb-4 text-center">
+                        <span className="text-gray-600">Klik untuk ke form</span>
+                    </div>
+                    
+                    <div className="flex flex-1 w-full rounded-xl bg-white p-2 md:p-4 items-center justify-center">
+                        <img
+                        src="/images/qrcode.png"
+                        alt="QR Code Pendaftaran"
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                            e.target.src = "https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://forms.gle/your-form-link";
+                        }}
+                        />
+                    </div>
+                    </div>
+                </PinContainer>
+                </div>
+            </div>
+            </div>
+
+          {/* TIMELINE */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6 text-center">Timeline Pendaftaran</h2>
+
             <div className="space-y-4">
               <div className="flex items-start space-x-3 md:space-x-4">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base">
@@ -196,6 +198,7 @@ export default function Recruitment() {
                   <p className="text-gray-600 text-xs md:text-sm">19 Nov - 24 Nov 2025</p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-3 md:space-x-4">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base">
                   2
@@ -205,15 +208,17 @@ export default function Recruitment() {
                   <p className="text-gray-600 text-xs md:text-sm">26 Nov - 27 Nov 2025</p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-3 md:space-x-4">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base">
                   3
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-bold text-gray-800 text-sm md:text-base">Wawancara</h3>
-                  <p className="text-gray-600 text-xs md:text-sm">30 Nov - 2 Des 20256</p>
+                  <p className="text-gray-600 text-xs md:text-sm">30 Nov - 2 Des 2025</p>
                 </div>
               </div>
+
               <div className="flex items-start space-x-3 md:space-x-4">
                 <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base">
                   4
@@ -226,26 +231,33 @@ export default function Recruitment() {
             </div>
           </div>
 
-          {/* Contact Info */}
+          {/* CONTACT */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-            <p className="text-gray-600 mb-4 text-center text-sm md:text-base">Butuh bantuan? Hubungi kami:</p>
+            <p className="text-gray-600 mb-4 text-center text-sm md:text-base">
+              Butuh bantuan? Hubungi kami:
+            </p>
+
             <div className="flex flex-col space-y-3">
-              <a 
-                href="mailto:menyapakomodo@ugm.ac.id" 
+              <a
+                href="https://instagram.com/menyapakomodo"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-green-600 hover:text-green-700 font-medium text-center break-all text-sm md:text-base"
               >
                 instagram: @menyapakomodo
               </a>
-              <a 
-                href="https://wa.me/6282322616464" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+
+              <a
+                href="https://wa.me/6282322616464"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-green-600 hover:text-green-700 font-medium text-center text-sm md:text-base"
               >
                 +62 823-2261-6464 (Hifdzan)
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </div>
