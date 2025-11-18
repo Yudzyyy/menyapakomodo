@@ -24,78 +24,78 @@ function App() {
 
   const galleryProducts = [
     {
-      title: "Pembukaan KKN Menyapa Komodo",
-      thumbnail: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600",
+      title: "Porsenimodo",
+      thumbnail: "/images/gallery/foto1.jpg",
       category: "Acara Resmi"
     },
     {
-      title: "Penanaman Pohon Bersama",
-      thumbnail: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600",
+      title: "Lomba Balap Ketinting",
+      thumbnail: "/images/gallery/foto2.jpg",
       category: "Lingkungan"
     },
     {
-      title: "Bimbingan Belajar Anak",
-      thumbnail: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600",
+      title: "Penyambutan TIM KKN",
+      thumbnail: "/images/gallery/foto3.jpg",
       category: "Pendidikan"
     },
     {
-      title: "Penyuluhan Kesehatan",
-      thumbnail: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600",
+      title: "Pelatihan UMKM",
+      thumbnail: "/images/gallery/foto4.jpg",
       category: "Kesehatan"
     },
     {
-      title: "Pelatihan UMKM Lokal",
-      thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
+      title: "Penyuluhan",
+      thumbnail: "/images/gallery/foto5.jpg",
       category: "Pemberdayaan"
     },
     {
-      title: "Festival Budaya Lokal",
-      thumbnail: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600",
+      title: "Edukasi Energi",
+      thumbnail: "/images/gallery/foto6.jpg",
       category: "Budaya"
     },
     {
-      title: "Gotong Royong Kecamatan",
-      thumbnail: "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600",
+      title: "Cek Kesehatan",
+      thumbnail: "/images/gallery/foto7.jpg",
       category: "Sosial"
     },
     {
-      title: "Pelatihan Ekowisata",
-      thumbnail: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600",
+      title: "Porsenimodo",
+      thumbnail: "/images/gallery/foto8.jpg",
       category: "Pariwisata"
     },
     {
-      title: "Kelas Bahasa Inggris",
-      thumbnail: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=600",
+      title: "Pelatihan Teknik Sipil Sederhana",
+      thumbnail: "/images/gallery/foto9.jpg",
       category: "Pendidikan"
     },
     {
-      title: "Workshop Kerajinan Tangan",
-      thumbnail: "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=600",
+      title: "Eksplor",
+      thumbnail: "/images/gallery/foto10.jpg",
       category: "Pemberdayaan"
     },
     {
-      title: "Posyandu Balita",
-      thumbnail: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600",
+      title: "Gerakan Sikat Gigi",
+      thumbnail: "/images/gallery/foto11.jpg",
       category: "Kesehatan"
     },
     {
-      title: "Pelatihan Diving",
-      thumbnail: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600",
+      title: "Gerakan Sikat Gigi SD",
+      thumbnail: "/images/gallery/foto12.jpg",
       category: "Pariwisata"
     },
     {
-      title: "Lomba 17 Agustus",
-      thumbnail: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600",
+      title: "Nutrisiku",
+      thumbnail: "/images/gallery/foto13.jpg",
       category: "Sosial"
     },
     {
-      title: "Bersih-Bersih Pantai",
-      thumbnail: "https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?w=600",
+      title: "Penyuluhan Nutrisiku",
+      thumbnail: "/images/gallery/foto14.jpg",
       category: "Lingkungan"
     },
     {
       title: "Penutupan KKN",
-      thumbnail: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600",
+      thumbnail: "/images/gallery/foto15.jpg",
       category: "Acara Resmi"
     },
   ];
