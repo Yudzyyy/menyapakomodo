@@ -266,12 +266,12 @@ function App() {
                 <div className="bg-white/95 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg text-center">
                   <Users className="w-8 h-8 md:w-10 md:h-10 text-teal-600 mx-auto mb-2 md:mb-3" />
                   <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-1">Tim</h3>
-                  <p className="text-sm md:text-base text-gray-600">18/30 Mahasiswa</p>
+                  <p className="text-sm md:text-base text-gray-600">TBA</p>
                 </div>
                 <div className="bg-white/95 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-lg text-center">
                   <Award className="w-8 h-8 md:w-10 md:h-10 text-teal-600 mx-auto mb-2 md:mb-3" />
                   <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-1">Program</h3>
-                  <p className="text-sm md:text-base text-gray-600">17 Kegiatan</p>
+                  <p className="text-sm md:text-base text-gray-600">TBA</p>
                 </div>
               </div>
             </div>
