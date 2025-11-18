@@ -25,77 +25,77 @@ function App() {
   const galleryProducts = [
     {
       title: "Porsenimodo",
-      thumbnail: "/images/gallery/foto1.jpg",
+      thumbnail: "/images/gallery/foto1.png",
       category: "Acara Resmi"
     },
     {
       title: "Lomba Balap Ketinting",
-      thumbnail: "/images/gallery/foto2.jpg",
+      thumbnail: "/images/gallery/foto2.png",
       category: "Lingkungan"
     },
     {
       title: "Penyambutan TIM KKN",
-      thumbnail: "/images/gallery/foto3.jpg",
+      thumbnail: "/images/gallery/foto3.png",
       category: "Pendidikan"
     },
     {
       title: "Pelatihan UMKM",
-      thumbnail: "/images/gallery/foto4.jpg",
+      thumbnail: "/images/gallery/foto4.png",
       category: "Kesehatan"
     },
     {
       title: "Penyuluhan",
-      thumbnail: "/images/gallery/foto5.jpg",
+      thumbnail: "/images/gallery/foto5.png",
       category: "Pemberdayaan"
     },
     {
       title: "Edukasi Energi",
-      thumbnail: "/images/gallery/foto6.jpg",
+      thumbnail: "/images/gallery/foto6.png",
       category: "Budaya"
     },
     {
       title: "Cek Kesehatan",
-      thumbnail: "/images/gallery/foto7.jpg",
+      thumbnail: "/images/gallery/foto7.png",
       category: "Sosial"
     },
     {
       title: "Porsenimodo",
-      thumbnail: "/images/gallery/foto8.jpg",
+      thumbnail: "/images/gallery/foto8.png",
       category: "Pariwisata"
     },
     {
       title: "Pelatihan Teknik Sipil Sederhana",
-      thumbnail: "/images/gallery/foto9.jpg",
+      thumbnail: "/images/gallery/foto9.png",
       category: "Pendidikan"
     },
     {
       title: "Eksplor",
-      thumbnail: "/images/gallery/foto10.jpg",
+      thumbnail: "/images/gallery/foto10.png",
       category: "Pemberdayaan"
     },
     {
       title: "Gerakan Sikat Gigi",
-      thumbnail: "/images/gallery/foto11.jpg",
+      thumbnail: "/images/gallery/foto11.png",
       category: "Kesehatan"
     },
     {
       title: "Gerakan Sikat Gigi SD",
-      thumbnail: "/images/gallery/foto12.jpg",
+      thumbnail: "/images/gallery/foto12.png",
       category: "Pariwisata"
     },
     {
       title: "Nutrisiku",
-      thumbnail: "/images/gallery/foto13.jpg",
+      thumbnail: "/images/gallery/foto13.png",
       category: "Sosial"
     },
     {
       title: "Penyuluhan Nutrisiku",
-      thumbnail: "/images/gallery/foto14.jpg",
+      thumbnail: "/images/gallery/foto14.png",
       category: "Lingkungan"
     },
     {
       title: "Penutupan KKN",
-      thumbnail: "/images/gallery/foto15.jpg",
+      thumbnail: "/images/gallery/foto15.png",
       category: "Acara Resmi"
     },
   ];
