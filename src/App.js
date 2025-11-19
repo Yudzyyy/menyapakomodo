@@ -147,6 +147,7 @@ function App() {
               src="/images/logo.png" 
               alt="Menyapa Komodo Logo" 
               className="w-20 h-20 md:w-32 md:h-32 object-contain drop-shadow-2xl mx-auto"
+               loading="lazy"
             />
           </div>
 
@@ -154,6 +155,7 @@ function App() {
             src="/images/title.png" 
             alt="Menyapa Komodo" 
             className="w-full max-w-2xl md:max-w-4xl mx-auto mb-3 md:mb-4 drop-shadow-2xl"
+            loading="lazy" 
           />
           
           <div className="text-sm sm:text-base md:text-xl lg:text-2xl text-white mb-8 md:mb-12 drop-shadow-lg font-medium px-4">
@@ -223,6 +225,7 @@ function App() {
                   src="/images/peta.jpg"
                   className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="Peta Kecamatan Komodo"
+                  loading="lazy" 
                 />
               </CardItem>
               <div className="flex justify-between items-center mt-6">
@@ -321,6 +324,7 @@ function App() {
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name}
+                  loading="lazy"
                   className="max-h-16 md:max-h-20 object-contain"
                 />
               </div>

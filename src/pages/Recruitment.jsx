@@ -127,8 +127,10 @@ export default function Recruitment() {
                   </button>
 
                   <a
-                    href="/files/GuidebookOprec.pdf"
+                    href="https://drive.google.com/uc?export=download&id=1eCLOprSH5oE0lnnc6vOG9r0h0uJb8R-p"
                     download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-2 px-4 md:px-6 py-2 md:py-3 bg-blue-600 text-white rounded-full font-semibold text-sm md:text-base hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
                   >
                     <Download className="w-4 h-4 md:w-5 md:h-5" />
@@ -140,9 +142,10 @@ export default function Recruitment() {
                 {showPdf && (
                   <div className="w-full border-4 border-blue-500 rounded-xl overflow-hidden shadow-2xl">
                     <iframe
-                      src={`https://docs.google.com/gview?embedded=true&url=https://menyapakomodo.vercel.app/files/GuidebookOprec.pdf`}
+                      src="https://drive.google.com/file/d/1eCLOprSH5oE0lnnc6vOG9r0h0uJb8R-p/preview"
                       className="w-full h-[500px] md:h-[700px]"
                       title="Guidebook PDF"
+                      allow="autoplay"
                     />
                   </div>
                 )}
