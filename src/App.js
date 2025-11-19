@@ -3,6 +3,7 @@ import { CardContainer, CardBody, CardItem } from './components/ui/3d-card';
 import { MapPin, Calendar, Users, Award, ChevronDown } from 'lucide-react';
 import { FloatingNav } from './components/FloatingNav';
 import { HeroParallax } from './components/HeroParallax';
+import { EncryptedText } from './components/ui/encrypted-text';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -62,7 +63,7 @@ function App() {
     },
     {
       title: "Porsenimodo",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534919/foto8_nhoj35.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763549515/DSCN3581_igfb9i.webp",
       category: "Olahraga"
     },
     {
@@ -108,7 +109,8 @@ function App() {
     { name: "Sinarmas", logo: "images/sinarmas.png" },
     { name: "Bank NTT", logo: "images/bankntt.png" },
     { name: "Pepsodent", logo: "images/pepsodent.png" },
-    { name: "Parimas", logo: "images/parimas.png" }
+    { name: "Parimas", logo: "images/parimas.png" },
+    { name: "Kopernik", logo: "images/kopernik.jpg" }
   ];
 
   const scrollToSection = (sectionId) => {
@@ -154,9 +156,14 @@ function App() {
             className="w-full max-w-2xl md:max-w-4xl mx-auto mb-3 md:mb-4 drop-shadow-2xl"
           />
           
-          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white mb-8 md:mb-12 drop-shadow-lg font-medium px-4">
-            KKN-PPM UGM Periode II - 2026
-          </p>
+          <div className="text-sm sm:text-base md:text-xl lg:text-2xl text-white mb-8 md:mb-12 drop-shadow-lg font-medium px-4">
+            <EncryptedText 
+              text="KKN-PPM UGM Periode II - 2026"
+              className="text-white"
+              revealDelayMs={30}
+              flipDelayMs={40}
+            />
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center w-full max-w-md px-4">
             <button 
@@ -287,26 +294,34 @@ function App() {
         <HeroParallax products={galleryProducts} />
       </section>
 
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Potensi Sponsor & Partner</h2>
-            <div className="w-24 h-1 bg-green-600 mx-auto rounded-full mb-4"></div>
-            <p className="text-gray-600 text-base md:text-lg">
-              Potensi Sponsor
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-8 max-w-6xl mx-auto">
-            {sponsors.map((sponsor, index) => (
-              <div 
-                key={index}
-                className="bg-white p-4 md:p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center hover:-translate-y-1"
-              >
+      {/* Sponsors Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+            Mitra & Sponsor
+          </h2>
+          
+          {/* First Row - 4 logos */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
+            {sponsors.slice(0, 4).map((sponsor, index) => (
+              <div key={index} className="flex items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
                 <img 
                   src={sponsor.logo} 
                   alt={sponsor.name}
-                  className="w-full h-12 md:h-16 object-contain transition-all hover:scale-110"
+                  className="max-h-16 md:max-h-20 object-contain"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Second Row - 3 logos (centered) */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
+            {sponsors.slice(4, 7).map((sponsor, index) => (
+              <div key={index} className="flex items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                <img 
+                  src={sponsor.logo} 
+                  alt={sponsor.name}
+                  className="max-h-16 md:max-h-20 object-contain"
                 />
               </div>
             ))}

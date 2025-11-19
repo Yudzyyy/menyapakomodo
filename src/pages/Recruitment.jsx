@@ -3,6 +3,7 @@ import { Download } from 'lucide-react';
 import { PinContainer } from '../components/ui/3d-pin';
 import { useNavigate } from 'react-router-dom';
 import { FloatingNav } from '../components/FloatingNav';
+import { ContainerScroll } from '../components/ui/container-scroll-animation';
 
 export default function Recruitment() {
   const navigate = useNavigate();
@@ -148,15 +149,15 @@ export default function Recruitment() {
               </div>
             </div>
           </div>
-
-          {/* QR CODE */}
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+          
+                    {/* QR CODE */}
+                    <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
             <div className="text-center">
               <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
                 Form Pendaftaran
               </h3>
 
-              <p className="text-sm md:text-base text-gray-600 mb-6">
+              <p className="text-sm md  :text-base text-gray-600 mb-6">
                 Scan atau Klik untuk mendaftar
               </p>
 
@@ -193,6 +194,75 @@ export default function Recruitment() {
               </div>
             </div>
           </div>
+
+          {/* SURAT KKN */}
+          {/* SURAT KKN dengan Container Scroll - TAMBAH INI */}
+          <div className="mb-8">
+            <ContainerScroll
+              titleComponent={
+                <div className="mb-10">
+                  <h2 className="text-4xl md:text-6xl font-bold text-white mb-2">
+                    Surat Izin Orang Tua KKN 2026
+                  </h2>
+                  <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Surat resmi izin orang tua untuk calon peserta KKN-PPM UGM Menyapa Komodo Periode II 2026 di Kecamatan Komodo
+                  </p>
+                  
+                  {/* Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    
+                    <a  href="https://docs.google.com/document/d/1wNKUyqt26rcWrNKpK9LcPlJxjLIbBN1I/edit"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 px-6 md:px-8 py-3 md:py-4 bg-white text-green-700 rounded-full font-semibold text-sm md:text-lg hover:bg-gray-100 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+                    >
+                      <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      <span>Buka di Google Docs</span>
+                    </a>
+                    
+                    
+                    <a  href="https://docs.google.com/document/d/1wNKUyqt26rcWrNKpK9LcPlJxjLIbBN1I/export?format=pdf"
+                      download
+                      className="inline-flex items-center space-x-2 px-6 md:px-8 py-3 md:py-4 bg-green-600 text-white rounded-full font-semibold text-sm md:text-lg hover:bg-green-700 transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+                    >
+                      <Download className="w-5 h-5 md:w-6 md:h-6" />
+                      <span>Download PDF</span>
+                    </a>
+                  </div>
+                </div>
+              }
+            >
+              {/* Screenshot Surat - Clickable */}
+              <a 
+                href="https://docs.google.com/document/d/1wNKUyqt26rcWrNKpK9LcPlJxjLIbBN1I/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full cursor-pointer group"
+              >
+                <img
+                  src="/images/suratortu.png"
+                  alt="Surat Pengantar KKN"
+                  className="w-full h-full object-cover rounded-lg transition-transform group-hover:scale-105"
+                />
+                
+                {/* Overlay on Hover */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors rounded-lg flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white px-6 py-3 rounded-full shadow-xl">
+                    <p className="text-green-700 font-semibold flex items-center space-x-2">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      <span>Klik untuk Membuka</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </ContainerScroll>
+          </div>
+
+
 
           {/* INFO CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
