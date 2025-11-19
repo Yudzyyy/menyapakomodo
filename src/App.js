@@ -28,7 +28,7 @@ function App() {
   const galleryProducts = [
     {
       title: "Porsenimodo",
-      thumbnail: "https://res.cloudinary.com/dyumuffqi/image/upload/w_800,q_80,f_auto/v1763534919/foto1_h6si8q.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763575702/foto8_ysxjfg.webp",
       category: "Olahraga"
     },
     {
@@ -63,7 +63,7 @@ function App() {
     },
     {
       title: "Porsenimodo",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763549515/DSCN3581_igfb9i.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763575702/foto8_ysxjfg.webp",
       category: "Olahraga"
     },
     {
