@@ -146,9 +146,11 @@ function App() {
             />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-3 md:mb-4 drop-shadow-2xl tracking-tight">
-            Menyapa Komodo
-          </h1>
+          <img 
+            src="/images/title.png" 
+            alt="Menyapa Komodo" 
+            className="w-full max-w-2xl md:max-w-4xl mx-auto mb-3 md:mb-4 drop-shadow-2xl"
+          />
           
           <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white mb-8 md:mb-12 drop-shadow-lg font-medium px-4">
             KKN-PPM UGM Periode II - 2026
