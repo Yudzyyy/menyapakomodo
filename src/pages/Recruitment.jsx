@@ -139,7 +139,7 @@ export default function Recruitment() {
                 {showPdf && (
                   <div className="w-full border-4 border-blue-500 rounded-xl overflow-hidden shadow-2xl">
                     <iframe
-                      src="/files/GuidebookOprec.pdf#view=FitH"
+                      src={`https://docs.google.com/gview?embedded=true&url=https://menyapakomodo.vercel.app/files/GuidebookOprec.pdf`}
                       className="w-full h-[500px] md:h-[700px]"
                       title="Guidebook PDF"
                     />
