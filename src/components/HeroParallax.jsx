@@ -11,7 +11,8 @@ export const HeroParallax = ({ products }) => {
     offset: ["start start", "end start"],
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  // REDUCED spring config untuk performa lebih baik
+  const springConfig = { stiffness: 100, damping: 20, bounce: 0 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -101,24 +102,30 @@ export const Header = () => {
 };
 
 export const ProductCard = ({ product, translate }) => {
-    return (
-      <motion.div
-        style={{
-          x: translate,
-        }}
-        whileHover={{
-          y: -20,
-        }}
-        key={product.title}
-        className="group/product h-64 w-48 sm:h-80 sm:w-64 md:h-96 md:w-[30rem] relative shrink-0"
-      >
+  return (
+    <motion.div
+      style={{
+        x: translate,
+      }}
+      whileHover={{
+        y: -20,
+      }}
+      key={product.title}
+      className="group/product h-64 w-48 sm:h-80 sm:w-64 md:h-96 md:w-[30rem] relative shrink-0"
+    >
       <div className="block group-hover/product:shadow-2xl">
-      <img
+        <img
           src={product.thumbnail}
+          loading="lazy"
+          decoding="async"
           height="600"
           width="600"
           className="object-cover object-center absolute h-full w-full inset-0 rounded-xl md:rounded-2xl"
           alt={product.title}
+          style={{ 
+            willChange: 'transform',
+            transform: 'translateZ(0)'
+          }}
         />
       </div>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-2xl transition-opacity duration-300"></div>
