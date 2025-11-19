@@ -348,7 +348,9 @@ function App() {
               <h4 className="text-lg md:text-xl font-bold mb-4">Kontak Kami</h4>
               <div className="space-y-3 text-green-200">
                 <p className="text-sm md:text-base">Instagram: menyapakomodo</p>
-                <p className="text-sm md:text-base">Telp: 082322616464 (Hifdzan)</p>
+                <p className="text-sm md:text-base">Email: menyapakomodo26@gmail.com</p>
+                <p className="text-sm md:text-base">Telp: 082322616464 (Hifdzan) & 0811-1840-533 (Marcha)
+                </p>
                 <p className="text-sm md:text-base">Lokasi: Kecamatan Komodo, NTT</p>
               </div>
             </div>
