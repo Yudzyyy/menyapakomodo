@@ -262,8 +262,6 @@ export default function Recruitment() {
             </ContainerScroll>
           </div>
 
-
-
           {/* INFO CARDS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-8">
 
@@ -342,7 +340,7 @@ export default function Recruitment() {
 
             <div className="space-y-4">
               {[
-                ["Pendaftaran Online", "19 Nov - 24 Nov 2025"],
+                ["Pendaftaran Online", "20 Nov - 24 Nov 2025"],
                 ["Seleksi Berkas", "26 Nov - 27 Nov 2025"],
                 ["Wawancara", "30 Nov - 2 Des 2025"],
                 ["Pengumuman", "6 Desember 2025"],
