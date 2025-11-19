@@ -28,77 +28,77 @@ function App() {
   const galleryProducts = [
     {
       title: "Porsenimodo",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763575702/foto8_ysxjfg.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763575702/foto8_ysxjfg.webp",
       category: "Olahraga"
     },
     {
       title: "Lomba Balap Ketinting",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534918/foto2_aujy9n.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534918/foto2_aujy9n.webp",
       category: "Lingkungan"
     },
     {
       title: "Penyambutan TIM KKN",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534918/foto3_o0fwa4.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534918/foto3_o0fwa4.webp",
       category: "Acara Resmi"
     },
     {
       title: "Pelatihan UMKM",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534919/foto4_z72uno.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534919/foto4_z72uno.webp",
       category: "Edukasi"
     },  
     {
       title: "Penyuluhan",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534918/foto5_svzyyk.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534918/foto5_svzyyk.webp",
       category: "Edukasi"
     },
     {
       title: "Edukasi Energi",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534918/foto6_atntwi.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534918/foto6_atntwi.webp",
       category: "Pendidikan"
     },
     {
       title: "Cek Kesehatan",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534919/foto7_gr2s2c.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534919/foto7_gr2s2c.webp",
       category: "Sosial"
     },
     {
       title: "Porsenimodo",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763575702/foto8_ysxjfg.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763575702/foto8_ysxjfg.webp",
       category: "Olahraga"
     },
     {
       title: "Pelatihan Teknik Sipil Sederhana",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534919/foto9_rzvmej.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534919/foto9_rzvmej.webp",
       category: "Pendidikan"
     },
     {
       title: "Eksplor",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534920/foto10_vuz6l6.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534920/foto10_vuz6l6.webp",
       category: "Pendidikan"
     },
     {
       title: "Gerakan Sikat Gigi",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534919/foto11_l08bkt.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534919/foto11_l08bkt.webp",
       category: "Kesehatan"
     },
     {
       title: "Gerakan Sikat Gigi SD",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534920/foto12_vy27uu.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534920/foto12_vy27uu.webp",
       category: "Edukasi"
     },
     {
       title: "Nutrisiku",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534920/foto13_rnxwmv.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534920/foto13_rnxwmv.webp",
       category: "Kesehatan"
     },
     {
       title: "Penyuluhan Nutrisiku",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534920/foto14_ztew8z.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534920/foto14_ztew8z.webp",
       category: "Kesehatan"
     },
     {
       title: "Penutupan KKN",
-      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/v1763534920/foto15_pz1twi.webp",
+      thumbnail: "https://res.cloudinary.com/dyumuffql/image/upload/w_800,h_600,c_fill,q_auto:good,f_auto/v1763534920/foto15_pz1twi.webp",
       category: "Acara Resmi"
     },
   ];
