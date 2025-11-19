@@ -113,11 +113,11 @@ export const ProductCard = ({ product, translate }) => {
         className="group/product h-64 w-48 sm:h-80 sm:w-64 md:h-96 md:w-[30rem] relative shrink-0"
       >
       <div className="block group-hover/product:shadow-2xl">
-        <img
+      <img
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-center absolute h-full w-full inset-0 rounded-2xl"
+          className="object-cover object-center absolute h-full w-full inset-0 rounded-xl md:rounded-2xl"
           alt={product.title}
         />
       </div>
