@@ -127,7 +127,7 @@ export default function Recruitment() {
                   </button>
 
                   <a
-                    href="https://drive.google.com/uc?export=download&id=1RBk-YVa6rrBMQvUFAKnhO1UAPVw-rGbL"
+                    href="https://drive.google.com/uc?export=download&id=1jg3CRKIwjeSEBrHBsSFwypQZknL88IJD"
                     download
                     target="_blank"
                     rel="noopener noreferrer"
@@ -142,7 +142,7 @@ export default function Recruitment() {
                 {showPdf && (
                   <div className="w-full border-4 border-blue-500 rounded-xl overflow-hidden shadow-2xl">
                     <iframe
-                      src="https://drive.google.com/file/d/1RBk-YVa6rrBMQvUFAKnhO1UAPVw-rGbL/preview"
+                      src="https://drive.google.com/file/d/1jg3CRKIwjeSEBrHBsSFwypQZknL88IJD/preview"
                       className="w-full h-[500px] md:h-[700px]"
                       title="Guidebook PDF"
                       allow="autoplay"
