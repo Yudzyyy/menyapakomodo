@@ -15,4 +15,3 @@ Tujuannya adalah untuk menyampaikan program, publikasi kegiatan, serta informasi
 
 ---
 
-## 📂 Struktur Folder
