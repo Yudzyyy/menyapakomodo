@@ -100,13 +100,13 @@ export default function Proposal() {
     <main className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-emerald-200">
       {/* ================= NAVBAR ================= */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
-            : "bg-transparent py-5"
-        }`}
-      >
-        <div className="max-w-6xl mx-auto px-6 relative flex items-center justify-center">
+          className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+            isScrolled
+              ? "bg-white/90 backdrop-blur-md shadow-sm py-2 sm:py-3"
+              : "bg-transparent py-3 sm:py-5"
+          }`}
+        >
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 relative flex items-center justify-between">
           <div className="hidden md:flex gap-1 bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
             {navItems.map((item) => (
               <a
@@ -119,13 +119,15 @@ export default function Proposal() {
             ))}
           </div>
 
-          <div className="md:hidden absolute right-6">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 bg-white/80 rounded-lg border shadow-sm text-slate-700"
-            >
-              ☰
-            </button>
+          <div className="md:hidden relative">
+
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-2.5 bg-white/90 rounded-xl border shadow-sm text-slate-700"
+          >
+            ☰
+          </button>
+
           </div>
         </div>
 
