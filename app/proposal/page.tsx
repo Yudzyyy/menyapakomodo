@@ -312,7 +312,7 @@ export default function ProposalProfessional() {
             <div className="relative aspect-[4/5] sm:aspect-[16/9] overflow-hidden rounded-2xl border border-neutral-200/60 bg-white shadow-2xl shadow-emerald-900/10 transition-shadow duration-500 group-hover:shadow-emerald-900/20">
                <div className="absolute inset-0 z-0 bg-neutral-100">
                   <iframe
-                    src="/proposal.pdf#view=Fit"
+                    src="/pdfjs/web/viewer.html?file=/proposal.pdf"
                     className="h-full w-full opacity-90 grayscale-[20%] transition-all duration-500 group-hover:grayscale-0"
                     title="Preview"
                   />
@@ -506,7 +506,7 @@ export default function ProposalProfessional() {
                 </button>
               </div>
               <iframe
-                src="/proposal.pdf"
+                src="/pdfjs/web/viewer.html?file=/proposal.pdf"
                 className="h-[calc(100%-64px)] w-full bg-neutral-800"
                 title="Proposal PDF Full"
               />
