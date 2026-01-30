@@ -169,6 +169,7 @@ export default function ProposalProfessional() {
       orientation: 'vertical', 
       gestureOrientation: 'vertical',
       smoothWheel: true,
+      touchMultiplier: 2,
     });
 
     function raf(time: number) {
