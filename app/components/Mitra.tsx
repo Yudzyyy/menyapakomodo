@@ -60,19 +60,7 @@ export default function Mitra() {
           </div>
         </div>
 
-        {/* INFO */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-50 border border-emerald-200 rounded-full shadow-sm">
-            <span className="text-2xl">🤝</span>
-            <span className="text-sm sm:text-base text-gray-700">
-              Terima kasih atas dukungan dan kepercayaan seluruh mitra
-            </span>
-          </div>
-        </div>
       </div>
-
-      {/* BOTTOM DIVIDER */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent" />
     </section>
   );
 }

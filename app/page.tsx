@@ -8,6 +8,8 @@ import Lokasi from "./components/Lokasi";
 import Mitra from "./components/Mitra";
 import Tentang from "./components/Tentang";
 
+import Footer from "./components/Footer";
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -36,6 +38,7 @@ export default function Home() {
       <Lokasi />
       <Dokumentasi />
       <Mitra />
+      <Footer />
     </main>
   );
 }

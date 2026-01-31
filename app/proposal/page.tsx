@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import Footer from "../components/Footer";
 
 // --- UTILITY COMPONENTS ---
 
@@ -211,6 +212,19 @@ export default function ProposalProfessional() {
           scrollTrigger: {
             trigger: ".benefits-section",
             start: "top 70%",
+          },
+        }
+      );
+      // Footer Reveal
+      gsap.fromTo("footer .mx-auto",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: "footer",
+            start: "top 85%",
           },
         }
       );
@@ -431,54 +445,7 @@ export default function ProposalProfessional() {
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
-      <footer className="border-t border-neutral-200 bg-white pb-12 pt-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-12 lg:grid-cols-4">
-            <div className="lg:col-span-2">
-              <div className="flex items-center gap-2">
-                <div className="size-6 rounded-full bg-emerald-900" />
-                <span className="text-xl font-bold tracking-tight text-neutral-900">Menyapa Komodo</span>
-              </div>
-              <p className="mt-6 max-w-sm text-neutral-500">
-                Program Kuliah Kerja Nyata Pembelajaran Pemberdayaan Masyarakat (KKN-PPM) Universitas Gadjah Mada Periode II Tahun 2026.
-              </p>
-            </div>
-            
-            <div>
-              <h4 className="font-semibold text-neutral-900">Navigasi</h4>
-              <ul className="mt-6 space-y-4 text-sm text-neutral-500">
-                {['Beranda', 'Tentang', 'Program Kerja', 'Dokumentasi'].map(link => (
-                  <li key={link}><a href="#" className="hover:text-emerald-700 hover:underline">{link}</a></li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-neutral-900">Kontak</h4>
-              <ul className="mt-6 space-y-4 text-sm text-neutral-500">
-                <li className="flex items-center gap-3">
-                  <span className="block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  +62 878-5931-8683 (Dyah)
-                </li>
-                <li className="flex items-center gap-3">
-                  <span className="block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  menyapakomodo26@gmail.com
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 block h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-500" />
-                  Kec. Komodo, Manggarai Barat, NTT.
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-neutral-100 pt-8 text-xs text-neutral-400 md:flex-row">
-            <p>&copy; 2026 Menyapa Komodo. All rights reserved.</p>
-            <p>Designed with passion by KKN-PPM UGM Team.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer isProposal={true} />
 
       {/* --- PDF VIEWER MODAL --- */}
       <AnimatePresence>
