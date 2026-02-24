@@ -93,16 +93,15 @@ export default function Lokasi() {
               <div className="flex justify-between items-center mt-20">
                 <CardItem
                   translateZ={20}
-                  as={Link}
-                  href="https://maps.google.com/?q=Golo+Mori"
-                  target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-medium text-emerald-700"
                 >
                   Kecamatan Komodo, Manggarai Barat
                 </CardItem>
                 <CardItem
                   translateZ={20}
-                  as="button"
+                  as={Link}
+                  href="https://maps.google.com/?q=Golo+Mori"
+                  target="_blank"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
                   Buka di Maps
@@ -141,16 +140,15 @@ export default function Lokasi() {
               <div className="flex justify-between items-center mt-20">
                 <CardItem
                   translateZ={20}
-                  as={Link}
-                  href="https://maps.google.com/?q=Warloka+Komodo"
-                  target="__blank"
                   className="px-4 py-2 rounded-xl text-xs font-medium text-emerald-700"
                 >
                   Kecamatan Komodo, Manggarai Barat
                 </CardItem>
                 <CardItem
                   translateZ={20}
-                  as="button"
+                  as={Link}
+                  href="https://maps.google.com/?q=Warloka+Pesisir+Komodo"
+                  target="_blank"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
                   Buka di Maps
