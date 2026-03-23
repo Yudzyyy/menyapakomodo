@@ -436,9 +436,6 @@ export default function OpenRecruitment() {
       <section className="relative bg-neutral-50 py-24">
         <div className="mx-auto max-w-5xl px-6">
           <div className="rounded-3xl bg-gradient-to-br from-emerald-100 via-white to-amber-50 border border-emerald-100 p-10 md:p-16 text-center shadow-xl shadow-emerald-900/5 relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-8 opacity-10 rotate-12 pointer-events-none">
-              <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor" className="text-emerald-900"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" /></svg>
-            </div>
             
             <h2 className="text-3xl md:text-5xl font-extrabold text-neutral-900 mb-6 relative z-10">
               Belum dapat tim KKN? <br className="hidden md:block" /> Di sini tempatnya.
