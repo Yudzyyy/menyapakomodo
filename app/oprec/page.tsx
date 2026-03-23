@@ -441,7 +441,7 @@ export default function OpenRecruitment() {
             </div>
             
             <h2 className="text-3xl md:text-5xl font-extrabold text-neutral-900 mb-6 relative z-10">
-              Punya skill? Punya relasi? <br className="hidden md:block" /> Ini tempatnya.
+              Belum dapat tim KKN? <br className="hidden md:block" /> Di sini tempatnya.
             </h2>
             <p className="text-lg md:text-xl text-neutral-600 mb-10 relative z-10 max-w-2xl mx-auto">
               Daftar sekarang dan jadi bagian dari keluarga Menyapa Komodo 2026.
@@ -456,7 +456,7 @@ export default function OpenRecruitment() {
             
             <div className="mt-8 flex justify-center gap-6 text-sm font-semibold text-emerald-800/60 flex-wrap relative z-10">
               <span className="flex items-center gap-1">Sponsorship</span> • 
-              <span className="flex items-center gap-1">Desain</span> • 
+              <span className="flex items-center gap-1">DDD (Medkre)</span> • 
               <span className="flex items-center gap-1">Lokotrans</span> • 
               <span className="flex items-center gap-1">Kluster Medika/Agro</span>
             </div>
