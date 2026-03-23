@@ -57,6 +57,7 @@ const Navbar = () => {
       { label: "Beranda", href: "/" },
       { label: "Tentang", href: "/#tentang" },
       { label: "Dokumentasi", href: "/#dokumentasi" },
+      { label: "Oprec", href: "/oprec" },
     ];
   
     return (

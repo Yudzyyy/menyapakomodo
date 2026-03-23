@@ -22,6 +22,7 @@ export default function Hero() {
     { label: "Lokasi", href: "#lokasi" },
     { label: "Dokumentasi", href: "#dokumentasi" },
     { label: "Proposal", href: "/proposal" },
+    { label: "Oprec", href: "/oprec" },
     { label: "Mitra", href: "#mitra" },
   ];
 
