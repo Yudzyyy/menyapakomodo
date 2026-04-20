@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 
 // --- UTILITY COMPONENTS ---
@@ -43,6 +43,12 @@ const ShimmerButton = ({ children, onClick, variant = "primary", className = "" 
 
 // --- MAIN COMPONENT ---
 
+const navItems = [
+  { label: "Beranda", href: "/" },
+  { label: "Tentang", href: "/#tentang" },
+  { label: "Dokumentasi", href: "/#dokumentasi" },
+];
+
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,13 +58,6 @@ const Navbar = () => {
       window.addEventListener("scroll", handleScroll);
       return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-  
-    const navItems = [
-      { label: "Beranda", href: "/" },
-      { label: "Tentang", href: "/#tentang" },
-      { label: "Dokumentasi", href: "/#dokumentasi" },
-      { label: "Oprec", href: "/oprec" },
-    ];
   
     return (
       <>

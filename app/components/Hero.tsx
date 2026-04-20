@@ -2,6 +2,14 @@
 
 import { useEffect, useState } from "react";
 
+const navItems = [
+  { label: "Tentang", href: "#tentang" },
+  { label: "Lokasi", href: "#lokasi" },
+  { label: "Dokumentasi", href: "#dokumentasi" },
+  { label: "Proposal", href: "/proposal" },
+  { label: "Mitra", href: "#mitra" },
+];
+
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -16,15 +24,6 @@ export default function Hero() {
   }, []);
 
   const isScrolled = scrollY > 50;
-
-  const navItems = [
-    { label: "Tentang", href: "#tentang" },
-    { label: "Lokasi", href: "#lokasi" },
-    { label: "Dokumentasi", href: "#dokumentasi" },
-    { label: "Proposal", href: "/proposal" },
-    { label: "Oprec", href: "/oprec" },
-    { label: "Mitra", href: "#mitra" },
-  ];
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">

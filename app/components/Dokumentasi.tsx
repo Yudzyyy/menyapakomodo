@@ -39,7 +39,7 @@ export default function Dokumentasi() {
     ...originalPhotos,
     ...originalPhotos,
     ...originalPhotos
-  ].slice(0, 15).map((photo, index) => ({
+  ].slice(0, 15).map((photo) => ({
     title: photo.title,
     link: "#", // No specific link for now
     thumbnail: photo.src,
