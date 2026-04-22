@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Mitra() {
   return (
     <section
@@ -52,10 +54,13 @@ export default function Mitra() {
         {/* SINGLE IMAGE CONTAINER */}
         <div className="flex justify-center">
           <div className="relative bg-white border border-gray-200 rounded-3xl shadow-xl p-6 sm:p-10 hover:shadow-2xl hover:shadow-emerald-200/50 transition-all duration-500 hover:-translate-y-1">
-            <img
+            <Image
               src="/mitra.png"
               alt="Daftar Mitra Terdahulu KKN PPM UGM"
+              width={1000}
+              height={500}
               className="max-w-full h-auto object-contain"
+              loading="lazy"
             />
           </div>
         </div>

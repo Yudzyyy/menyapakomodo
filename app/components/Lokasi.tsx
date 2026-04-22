@@ -158,22 +158,22 @@ export default function Lokasi() {
           </CardContainer>
         </div>
 
-        {/* BADGES – KONTRAS AMAN */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <div className="px-6 py-3 rounded-full
-            bg-gradient-to-r from-emerald-600 to-teal-600
-            text-white text-sm font-medium shadow-md">
-            🗺️ 2 Desa Dampingan
+        {/* HIGHLIGHTS */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="group relative bg-white/70 backdrop-blur-sm border border-emerald-200/60 rounded-2xl px-6 py-5 text-center hover:shadow-lg hover:border-emerald-300 transition-all duration-300">
+            <div className="text-3xl font-bold text-emerald-800 mb-1">2</div>
+            <div className="text-sm text-gray-600 font-medium">Desa Dampingan</div>
+            <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-emerald-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
           </div>
-          <div className="px-6 py-3 rounded-full
-            bg-gradient-to-r from-teal-600 to-cyan-600
-            text-white text-sm font-medium shadow-md">
-            🏖️ Pesisir Komodo
+          <div className="group relative bg-white/70 backdrop-blur-sm border border-teal-200/60 rounded-2xl px-6 py-5 text-center hover:shadow-lg hover:border-teal-300 transition-all duration-300">
+            <div className="text-sm font-bold text-teal-800 mb-1 tracking-wide uppercase">Pesisir</div>
+            <div className="text-sm text-gray-600 font-medium">Kecamatan Komodo</div>
+            <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-teal-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
           </div>
-          <div className="px-6 py-3 rounded-full
-            bg-gradient-to-r from-emerald-700 to-teal-700
-            text-white text-sm font-medium shadow-md">
-            🌱 Pariwisata Berkelanjutan
+          <div className="group relative bg-white/70 backdrop-blur-sm border border-cyan-200/60 rounded-2xl px-6 py-5 text-center hover:shadow-lg hover:border-cyan-300 transition-all duration-300">
+            <div className="text-sm font-bold text-cyan-800 mb-1 tracking-wide uppercase">Misi</div>
+            <div className="text-sm text-gray-600 font-medium">Pariwisata Berkelanjutan</div>
+            <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
           </div>
         </div>
       </div>

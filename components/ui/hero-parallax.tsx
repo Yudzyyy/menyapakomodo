@@ -4,10 +4,8 @@ import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { cn } from "@/lib/utils";
-
 export const HeroParallax = ({
-  products
+  products,
 }: {
   products: {
     title: string;
@@ -26,39 +24,59 @@ export const HeroParallax = ({
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1000]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], [0, -1000]), springConfig);
-  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
-  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
-  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
+  const translateX = useSpring(
+    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    springConfig
+  );
+  const translateXReverse = useSpring(
+    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    springConfig
+  );
+  const rotateX = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [15, 0]),
+    springConfig
+  );
+  const opacity = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    springConfig
+  );
+  const rotateZ = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [20, 0]),
+    springConfig
+  );
+  const translateY = useSpring(
+    useTransform(scrollYProgress, [0, 0.2], [-150, 500]),
+    springConfig
+  );
+
   return (
     <div
       ref={ref}
-      className="h-[250vh] md:h-[300vh] py-20 md:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      className="h-[300vh] md:h-[350vh] py-20 md:py-40 pb-40 md:pb-80 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+    >
       <Header />
-      
+
       <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity,
-        }}
-        className="">
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-20">
-          {firstRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
+        style={{ rotateX, rotateZ, translateY, opacity }}
+      >
+        {/* Baris 1 */}
+        <motion.div className="flex flex-row-reverse flex-nowrap gap-10 md:gap-20 mb-10 md:mb-20">
+          {firstRow.map((product, index) => (
+            <ProductCard product={product} translate={translateX} key={`first-${index}`} />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row mb-10 md:mb-20 space-x-10 md:space-x-20 ">
-          {secondRow.map((product) => (
-            <ProductCard product={product} translate={translateXReverse} key={product.title} />
+
+        {/* Baris 2 */}
+        <motion.div className="flex flex-row flex-nowrap gap-10 md:gap-20 mb-10 md:mb-20">
+          {secondRow.map((product, index) => (
+            <ProductCard product={product} translate={translateXReverse} key={`second-${index}`} />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard product={product} translate={translateX} key={product.title} />
+
+        {/* Baris 3 */}
+        <motion.div className="flex flex-row-reverse flex-nowrap gap-10 md:gap-20 mb-10 md:mb-20">
+          {thirdRow.map((product, index) => (
+            <ProductCard product={product} translate={translateX} key={`third-${index}`} />
           ))}
         </motion.div>
       </motion.div>
@@ -68,14 +86,13 @@ export const HeroParallax = ({
 
 export const Header = () => {
   return (
-    <div
-      className="max-w-7xl relative mx-auto py-10 md:py-40 px-4 w-full  left-0 top-0">
+    <div className="max-w-7xl relative mx-auto py-10 md:py-40 px-4 w-full left-0 top-0">
       <h1 className="text-3xl md:text-7xl font-bold text-emerald-900">
-        Dokumentasi <br /> KKN Menyapa Komodo
+        Dokumentasi <br /> TIM KKN Menyapa Komodo <br /> Tahun 2024 & 2025
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 text-emerald-800">
-        Momen berharga selama kegiatan pengabdian masyarakat di Kecamatan Komodo.
-        Kami membangun dengan hati untuk masyarakat.
+        Momen berharga selama kegiatan pengabdian masyarakat di Kecamatan
+        Komodo. Kami membangun dengan hati untuk masyarakat.
       </p>
     </div>
   );
@@ -83,7 +100,7 @@ export const Header = () => {
 
 export const ProductCard = ({
   product,
-  translate
+  translate,
 }: {
   product: {
     title: string;
@@ -94,26 +111,22 @@ export const ProductCard = ({
 }) => {
   return (
     <motion.div
-      style={{
-        x: translate,
-      }}
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-48 w-[15rem] md:h-96 md:w-[30rem] relative shrink-0">
-      <Link href={product.link} className="block group-hover/product:shadow-2xl ">
+      style={{ x: translate }}
+      whileHover={{ y: -20 }}
+      // ✅ tambah min-w agar foto tidak di-compress flex container
+      className="group/product h-48 w-[15rem] min-w-[15rem] md:h-96 md:w-[30rem] md:min-w-[30rem] relative shrink-0 rounded-2xl overflow-hidden ring-1 ring-black/10 shadow-md"
+    >
+      <Link href={product.link} className="block h-full w-full group-hover/product:shadow-2xl">
         <Image
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title} />
+          className="object-cover absolute h-full w-full inset-0"
+          alt={product.title}
+        />
       </Link>
-      <div
-        className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2
-        className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white text-xs md:text-base">
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none transition-opacity duration-300"></div>
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white text-xs md:text-base font-medium transition-opacity duration-300">
         {product.title}
       </h2>
     </motion.div>

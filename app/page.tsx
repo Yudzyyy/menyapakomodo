@@ -1,14 +1,16 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Dokumentasi from "./components/Dokumentasi";
 import Hero from "./components/Hero";
-import Lokasi from "./components/Lokasi";
-import Mitra from "./components/Mitra";
-import Tentang from "./components/Tentang";
 
-import Footer from "./components/Footer";
+const Dokumentasi = dynamic(() => import("./components/Dokumentasi"), { ssr: false });
+const Lokasi = dynamic(() => import("./components/Lokasi"), { ssr: false });
+const Mitra = dynamic(() => import("./components/Mitra"), { ssr: false });
+const Tentang = dynamic(() => import("./components/Tentang"), { ssr: false });
+const Footer = dynamic(() => import("./components/Footer"), { ssr: false });
+
 
 export default function Home() {
   useEffect(() => {

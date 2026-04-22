@@ -44,7 +44,7 @@ export default function Tentang() {
               fill
               className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
-              priority
+              loading="lazy"
             />
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function Tentang() {
           </div>
           <div className="backdrop-blur-sm bg-white/60 border border-emerald-200/50 rounded-xl p-4 text-center hover:scale-105 hover:shadow-lg transition-all">
             <div className="text-2xl sm:text-3xl font-bold text-emerald-700">
-              27
+              30
             </div>
             <div className="text-xs sm:text-sm text-gray-600 mt-1">
               Mahasiswa
